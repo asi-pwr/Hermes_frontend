@@ -1,30 +1,23 @@
 
-.center{
-    display: flex;
-    transform: translate(0,+50%);
-
-  }
-
-.resized{
-    width: 400px;
-    height: 200px;
+.main-page-form__centralised-element {
+  height: 80%;
+  display: flex;
+  transform: translate(0,+50%);
 }
 
-.top{
-  float:top;
+.main-page-form__message-content-textarea {
+  width: 75%;
+  height: 12em;
 }
 
-.down{
-  float:bottom;
+.main-page-form {
+  width: 50%;
+  height: 100%;
+  grid-template-rows: repeat(1,auto);
+  grid-template-columns: 75% auto;
+  display: grid;
 }
 
-.grid{
-    grid-template-rows: repeat(1,auto);
-    grid-template-columns: 500px 200px;
-    display: grid;
+.main-page-form__button {
+  margin-top: 6%;
 }
-
-.a{
-  margin-top: 20px;
-}
-
