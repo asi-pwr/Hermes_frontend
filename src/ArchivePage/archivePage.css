@@ -1,0 +1,6 @@
+.archive-main-content{
+    display: flex;
+    width: 90%;
+    padding: 10%;
+    justify-content: space-around;
+}
