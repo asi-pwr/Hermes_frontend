@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import MailView from './MailView';
 import MailList from './MailList';
 import './archivePage.css';
 
 const ArchivePage = () => {
+  const [mailSubject, setMailSubject] = useState("");
+
+  const onPickMailToView = (e) => setMailSubject(() => e.subject);
+
   return <div className="archive-main-content">
-      <MailView subject=" Hello World!" content="My first mail"/>
-      <MailList/>
+      <MailView subject={mailSubject} content="Mail Content"/>
+      <MailList onMailPick = {(e) => onPickMailToView(e)}/>
   </div>
 }
 

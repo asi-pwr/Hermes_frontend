@@ -1,22 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import MailDataView from './MailDataView';
 import './mailList.css';
 
+const mailArray = [{author:"Gmail pomoc", date:"2019-12-02", subject:"Password reset"},
+{author:"Pinterest", date:"2019-11-29", subject:"New ideas for your boards"},
+{author:"Spotify", date:"2020-01-06", subject:"Nowa muzyka, już teraz w Twoim Radarze premier"},
+{author:"Youtube", date:"2020-01-04", subject:"Użytkownik właśnie przesłał film"},
+{author:"NetAcad Notifications", date:"2019-12-31", subject:"Najnowsze powiadomienia z systemu Canvas"},
+{author:"Dział Spraw Międzynarodowych", date:"2020-01-19", subject:"Newsletter Działu Spraw Międzynarodowych"}];
+
+
 const MailList = (props) => {
 
-  const mailArray = [{author:"gmail pomoc", date:"24.06.2017", subject:"password reset"},
-  {author:"pinterest", date:"24.07.2018", subject:"new ideas for your boards"},
-  {author:"pinterest", date:"24.07.2018", subject:"new ideas for your boards"},
-  {author:"pinterest", date:"24.07.2018", subject:"new ideas for your boards"},
-  {author:"pinterest", date:"24.07.2018", subject:"new ideas for your boards"},
-  {author:"pinterest", date:"24.07.2018", subject:"new ideas for your boards"}];
+  const [mailList,setMailList] = useState(mailArray);
+  const [fromDate,setFromDate] = useState("");
+  const [toDate,setToDate] = useState("");
+
+
+  const changeFilterDate = (fromDate,toDate) => setMailList(mailArray.filter((elem)=>elem.date>=fromDate && (elem.date<=toDate||toDate==="")));
+  const onFromDateChange = (e) => {
+    setFromDate(e.target.value);
+    changeFilterDate(e.target.value, toDate);
+  };
+
+  const onToDateChange = (e) => {
+    setToDate(e.target.value);
+    changeFilterDate(fromDate,e.target.value);
+  };
 
   return <div className="mail-list-main-form">
     <ul className="mail-list">
-      {mailArray.map((elem)=><li><MailDataView author = {elem.author} date = {elem.date} subject = {elem.subject}/></li>)}
+      {mailList.map((elem)=><li><MailDataView author = {elem.author} date = {elem.date} subject = {elem.subject} onClick = {props.onMailPick}/></li>)}
     </ul> 
-    <span>From:</span><input className="archive-date-pick" type="date"/>
-    <span>To:</span><input className="archive-date-pick" type="date"/>
+    <span>From:</span><input className="archive-date-pick" type="date" onChange = {(e) => onFromDateChange(e)}/>
+    <span>To:</span><input className="archive-date-pick" type="date"  onChange = {(e) => onToDateChange(e)}/>
   </div>
 }
 
