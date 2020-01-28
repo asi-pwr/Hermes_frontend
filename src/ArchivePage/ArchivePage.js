@@ -8,7 +8,7 @@ const ArchivePage = () => {
 
   const onPickMailToView = (e) => setMailSubject(() => e.subject);
 
-  return <div className="archive-main-content">
+  return <div className="block block--main">
       <MailView subject={mailSubject} content="Mail Content"/>
       <MailList onMailPick = {(e) => onPickMailToView(e)}/>
   </div>

@@ -1,12 +1,12 @@
 import React from 'react';
-import './mailDataView.css'
+import'./archivePage.css';
 
 const MailDataView = (props) => {
-  return <div className="mail-data" onClick = {(e) => props.onClick(props)}>
-    <span className="date">{props.date}</span>
-    <div className="mail-content">
-      <span className="author">{props.author}</span>
-      <span className="subject">{props.subject}</span>
+  return <div className="block block--mail-list-elem" onClick = {(e) => props.onClick(props)}>
+    <span className="block__elem block__elem--date">{props.date}</span>
+    <div className="block block--mail-content">
+      <span className="block__elem block__elem--author">{props.author}</span>
+      <span className="block__elem block__elem--subject">{props.subject}</span>
     </div>
   </div>
 }

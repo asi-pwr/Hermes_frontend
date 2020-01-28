@@ -1,6 +1,70 @@
-.archive-main-content{
+.block{
     display: flex;
-    width: 90%;
-    padding: 10%;
+}
+
+.block--main {
+    width: 100%;
+    margin: 10% 0;
+    justify-content: center;
+}
+
+.block--mail {
+    margin: 0 10px;
+    flex-direction: column;
+    width:35%;
+    height: 100%;
+}
+
+.block--mail-list-elem{
+    border-bottom-style: groove;
+    border-color: green;
+    border-width: 2px;
+    flex-direction: column;
+    padding: 0% 2%;
+}
+
+.block--mail-content {
+    display:flex;
+    padding: 0% 2% 2% 2%;
     justify-content: space-around;
+}
+
+.block__elem {
+    display:block;
+}
+
+.block__elem--author {
+    width: 40%;
+    font-size: 0.7em;
+}
+
+.block__elem--date {
+    text-align: right;
+    color:#9a9a9a;
+    font-style: italic;
+    font-size: 0.6em;
+}
+
+.block__elem--subject {
+    width:60%;
+    text-align: justify;
+    font-size: 0.7em;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.list--mails{
+    overflow: auto;
+    border: groove;
+    border-width: 3px;
+    height:200px;
+}
+
+.input--date {
+    width:40%;
+    margin: 2% 0;
+    border-radius: 0.5ch;
 }
