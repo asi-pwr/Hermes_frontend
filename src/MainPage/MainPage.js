@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 import Form from './Form.js'
 
 const MainPage = () => {
-    return (
-      <div>
-        <Form></Form>
-      </div>
-    );
+  return (
+    <div>
+      <Form></Form>
+    </div>
+  )
 }
 
-export default MainPage;
+export default MainPage
