@@ -2,12 +2,10 @@ import React from 'react';
 import './archivePage.css';
 
 const MailView = (props) => {
-  return <div className = "block block--mail">
+  return <div className = "block-mail-view">
       <div>
-          <h4> 
-              <span>Subject: </span>
-              <span>{props.subject} </span>
-          </h4>
+        <span>Subject: </span>
+        <span>{props.subject}</span>
       </div>
       <div>
           {props.content}

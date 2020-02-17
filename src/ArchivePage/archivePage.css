@@ -1,69 +1,79 @@
-.block{
+.block-main {
     display: flex;
-}
-
-.block--main {
     width: 100%;
     margin: 10% 0;
     justify-content: center;
 }
 
-.block--mail {
+.block-mail-view {
+    display: flex;
     margin: 0 10px;
     flex-direction: column;
     width:35%;
     height: 100%;
 }
 
-.block--mail-list-elem{
-    border-bottom-style: groove;
-    border-color: green;
-    border-width: 2px;
+.block-mail-search {
+    display: flex;
+    margin: 0 10px;
+    flex-direction: column;
+    width:35%;
+    height: 100%;
+}
+
+.block-list {
     flex-direction: column;
     padding: 0% 2%;
 }
 
-.block--mail-content {
+.block-list--theme-green {
+    border-bottom-style: groove;
+    border-color: green;
+    border-width: 2px;
+}
+
+.block-list-content {
     display:flex;
     padding: 0% 2% 2% 2%;
     justify-content: space-around;
 }
 
-.block__elem {
+.block-list__elem {
     display:block;
 }
 
-.block__elem--author {
+.block-list__elem--author {
     width: 40%;
     font-size: 0.7em;
 }
 
-.block__elem--date {
+.block-list__elem--date {
     text-align: right;
     color:#9a9a9a;
     font-style: italic;
     font-size: 0.6em;
 }
 
-.block__elem--subject {
+.block-list__elem--subject {
     width:60%;
     text-align: justify;
     font-size: 0.7em;
 }
 
-.list {
-    list-style-type: none;
-    padding: 0px;
-}
-
-.list--mails{
-    overflow: auto;
+.list-mails {
+    overflow-y: scroll;
     border: groove;
     border-width: 3px;
     height:200px;
+    list-style-type: none;
+    min-width:200px;
+    min-height:200px;
+    height:25vh; 
+    padding: 0px;
 }
 
-.input--date {
+.input-date-start,
+.input-date-end {
     width:40%;
     margin: 2% 0;
     border-radius: 0.5ch;
