@@ -1,0 +1,23 @@
+
+.main-page-form__centralised-element {
+  height: 80%;
+  display: flex;
+  transform: translate(0,+50%);
+}
+
+.main-page-form__message-content-textarea {
+  width: 75%;
+  height: 12em;
+}
+
+.main-page-form {
+  width: 50%;
+  height: 100%;
+  grid-template-rows: repeat(1,auto);
+  grid-template-columns: 75% auto;
+  display: grid;
+}
+
+.main-page-form__button {
+  margin-top: 6%;
+}
