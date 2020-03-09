@@ -1,5 +1,5 @@
-import React from 'react';
-import'./archivePage.css';
+import React from 'react'
+import './archivePage.css'
 
 const MailDataView = (props) => {
   return <div className="block-list block-list--theme-green" onClick = {(e) => props.onClick(props)}>
@@ -11,4 +11,4 @@ const MailDataView = (props) => {
   </div>
 }
 
-export default MailDataView;
+export default MailDataView
