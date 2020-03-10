@@ -1,5 +1,7 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
+import { Link } from 'react-router-dom'
+import './mainPage.css'
 
 const Buttons = (props) => {
   return (
@@ -8,6 +10,7 @@ const Buttons = (props) => {
       <div className="main-page-form__button"><Button variant="contained" color="primary" onClick={() => deleteTemplate()}>deleteTemplate</Button></div>
       <div className="main-page-form__button"><Button variant="contained" color="primary" onClick={() => sendMail(props.subject, props.content)}>sendMail</Button></div>
       <div className="main-page-form__button"><Button variant="contained" color="primary" onClick={() => addTemplate(props.subject, props.content)}>addTemplate</Button></div>
+      <div className="main-page-form__button"><Button variant="contained" color="primary"><Link className="main-page-form__link" to="/archive">ArchivePage</Link></Button></div>
     </div>
   )
 }

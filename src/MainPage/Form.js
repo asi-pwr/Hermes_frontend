@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../center.css'
 import Buttons from './Buttons.js'
+import './mainPage.css'
 
 const Form = () => {
   const [subject, setSubject] = useState('')
